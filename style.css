@@ -27,8 +27,27 @@ dl, dd, ul, ol, pre {
 /* 3) Corpo do documento: altura mínima e line-height legível por padrão.
     Não força fonte específica para deixar você escolher livremente. */
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   line-height: 1.4;
   background: transparent;
   color: inherit;
+}
+
+main {
+  background-color: black;
+  height: 30rem;
+  width: 20rem;
+}
+
+input {
+  width: 90%;
+  height: 20%;
+}
+
+button {
+  height: 4rem;
+  width: 4rem;
 }
