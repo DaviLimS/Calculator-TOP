@@ -1,0 +1,34 @@
+/* Reset inicial minimal e explicativo
+    Objetivo: remover estilos padrão do navegador para que você possa
+    estilizar do zero sem surpresas. Comentários em PT-BR explicam cada parte.
+*/
+
+/* 1) Box sizing: garante que width/height incluam padding e border.
+    Aplicado via html para herdar em todos os elementos e pseudo-elementos. */
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; /* suaviza fontes no WebKit */
+  -moz-osx-font-smoothing: grayscale;  /* suaviza fontes no Firefox macOS */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* 2) Zerar margens e padding dos blocos textuais comuns para evitar gaps inesperados.
+    Mantemos todos os elementos de conteúdo sem margin/padding por padrão. */
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote,
+dl, dd, ul, ol, pre {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3) Corpo do documento: altura mínima e line-height legível por padrão.
+    Não força fonte específica para deixar você escolher livremente. */
+body {
+  min-height: 100vh;
+  line-height: 1.4;
+  background: transparent;
+  color: inherit;
+}
