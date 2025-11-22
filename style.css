@@ -46,21 +46,27 @@ main {
   width: 20rem;
 }
 
-input {
-  width: 98%;
-  height: 50%;
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
-
 button {
-  height: 5em;
-  width: 5em;
+  justify-self: center;
+  align-self: center;
+  height: 4.5em;
+  width: 4.5em;
+  margin-bottom: 10px;
 }
 
 .container {
   width: 90%;
   width: 90%;
+}
+
+#visor {
+  width: 17.5em;
+  height: 5em;
+  margin-bottom: 3em;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 15px;
 }
 
 .buttons {
