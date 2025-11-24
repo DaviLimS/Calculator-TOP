@@ -1,15 +1,22 @@
 let numbers = [];
 
 let output = document.querySelector('#output');
-let btn7 = document.querySelector('#seven')
+let btn7 = document.querySelector('#seven');
+let btn8 = document.querySelector('#eight');
+let btn9 = document.querySelector('#nine');
+let plus = document.querySelector('#plus');
+let btn4 = document.querySelector('#four');
+let btn5 = document.querySelector('#five');
 let btn6 = document.querySelector('#six');
-
-btn7.addEventListener("click", () => {
-    handleClick(7)
-});
-btn6.addEventListener("click", () => {
-    handleClick(6)
-});
+let minus = document.querySelector('minus');
+let btn1 = document.querySelector('#one');
+let btn2 = document.querySelector('#two');
+let btn3 = document.querySelector('#three');
+let times = document.querySelector('#mutiply');
+let point = document.querySelector('#point');
+let btn0 = document.querySelector('zero');
+let equal = document.querySelector('equal');
+let bar = document.querySelector('#divide');
 
 function handleClick(num) {
     if(typeof num === 'string') {
