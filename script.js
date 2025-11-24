@@ -6,6 +6,13 @@ let equal = document.querySelector('equal');
 let exclude = document.querySelector('#exclude');
 
 
+exclude.addEventListener('mousedown', () => {
+    console.log('mousedown');
+})
+exclude.addEventListener('mouseup', () => {
+    console.log('mouseup');
+})
+
 document.querySelector('#seven').addEventListener('click', () => { handleClick(7) });
 document.querySelector('#eight').addEventListener('click', () => { handleClick(8) });
 document.querySelector('#nine').addEventListener('click', () => { handleClick(9) });
