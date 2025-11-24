@@ -1,20 +1,12 @@
 let numbers = [];
+let timePassed;
 
 let output = document.querySelector('#output');
 let point = document.querySelector('#point');
 let equal = document.querySelector('equal');
 let exclude = document.querySelector('#exclude');
 
-exclude.addEventListener('mousedown', () => {
-    exclude.addEventListener('mouseup', () => {
-        output.innerText = output.textContent.slice(0, -1);
-    })
-    setTimeout(() => {
-        exclude.addEventListener('mouseup', () => {
-            output.innerText = '';
-        });
-    }, 3000);
-})
+
 
 document.querySelector('#seven').addEventListener('click', () => { handleClick(7) });
 document.querySelector('#eight').addEventListener('click', () => { handleClick(8) });
