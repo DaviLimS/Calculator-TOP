@@ -5,12 +5,15 @@ let point = document.querySelector('#point');
 let equal = document.querySelector('equal');
 let exclude = document.querySelector('#exclude');
 
-
 exclude.addEventListener('mousedown', () => {
-    console.log('mousedown');
-})
-exclude.addEventListener('mouseup', () => {
-    console.log('mouseup');
+    exclude.addEventListener('mouseup', () => {
+        output.innerText = output.textContent.slice(0, -1);
+    })
+    setTimeout(() => {
+        exclude.addEventListener('mouseup', () => {
+            output.innerText = '';
+        });
+    }, 3000);
 })
 
 document.querySelector('#seven').addEventListener('click', () => { handleClick(7) });
