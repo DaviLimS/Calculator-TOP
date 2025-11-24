@@ -1,22 +1,23 @@
 let numbers = [];
 
 let output = document.querySelector('#output');
-let btn7 = document.querySelector('#seven');
-let btn8 = document.querySelector('#eight');
-let btn9 = document.querySelector('#nine');
-let plus = document.querySelector('#plus');
-let btn4 = document.querySelector('#four');
-let btn5 = document.querySelector('#five');
-let btn6 = document.querySelector('#six');
-let minus = document.querySelector('minus');
-let btn1 = document.querySelector('#one');
-let btn2 = document.querySelector('#two');
-let btn3 = document.querySelector('#three');
-let times = document.querySelector('#mutiply');
 let point = document.querySelector('#point');
-let btn0 = document.querySelector('zero');
 let equal = document.querySelector('equal');
-let bar = document.querySelector('#divide');
+
+document.querySelector('#seven').addEventListener('click', () => { handleClick(7) });
+document.querySelector('#eight').addEventListener('click', () => { handleClick(8) });
+document.querySelector('#nine').addEventListener('click', () => { handleClick(9) });
+document.querySelector('#plus').addEventListener('click', () => { handleClick('+') });
+document.querySelector('#four').addEventListener('click', () => { handleClick(4) });
+document.querySelector('#five').addEventListener('click', () => { handleClick(5) });
+document.querySelector('#six').addEventListener('click', () => { handleClick(6) });
+document.querySelector('#minus').addEventListener('click', () => { handleClick('-') });
+document.querySelector('#one').addEventListener('click', () => { handleClick(1) });
+document.querySelector('#two').addEventListener('click', () => { handleClick(2) });
+document.querySelector('#three').addEventListener('click', () => { handleClick(3) });
+document.querySelector('#mutiply').addEventListener('click', () => { handleClick('*') });
+document.querySelector('#zero').addEventListener('click', () => { handleClick(0) });
+document.querySelector('#divide').addEventListener('click', () => { handleClick('/') });
 
 function handleClick(num) {
     if(typeof num === 'string') {
