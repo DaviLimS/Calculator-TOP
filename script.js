@@ -32,12 +32,10 @@ document.querySelector('#zero').addEventListener('click', () => { handleClick(0)
 document.querySelector('#divide').addEventListener('click', () => { handleClick('/') });
 
 function handleClick(num) {
-    let text = output.textContent;
     if(typeof num === 'string') {
         if(typeof numbers[numbers.length - 1] === 'string') {
             numbers.pop();
-            text = text.slice(0, -1);
-            output.innerHTML = text;
+            output.innerHTML = output.textContent.slice(0, -1);
         }
     }
     numbers.push(num);
