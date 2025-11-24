@@ -3,6 +3,8 @@ let numbers = [];
 let output = document.querySelector('#output');
 let point = document.querySelector('#point');
 let equal = document.querySelector('equal');
+let exclude = document.querySelector('#exclude');
+
 
 document.querySelector('#seven').addEventListener('click', () => { handleClick(7) });
 document.querySelector('#eight').addEventListener('click', () => { handleClick(8) });
