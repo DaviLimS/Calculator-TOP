@@ -1,5 +1,6 @@
 let numbers = [];
 
+let output = document.querySelector('#output');
 let btn7 = document.querySelector('#seven')
 let btn6 = document.querySelector('#six');
 
@@ -17,6 +18,8 @@ function handleClick(num) {
         }
     }
     numbers.push(num);
+    output.innerText += num
+
 }
 
 /*
