@@ -58,5 +58,6 @@ function evaluate(expression) {
     script.text = 'result = ' + expression + ';';
     document.body.appendChild(script);
     output.innerText = result;
+    numbers = [result];
     document.body.removeChild(script);
 }
