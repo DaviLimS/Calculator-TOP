@@ -60,10 +60,3 @@ function evaluate(expression) {
     output.innerText = result;
     document.body.removeChild(script);
 }
-
-
-
-/*
-criar um código em que o usuario digita o número e este é colocado em um array quando ele começar a escrever um novo dígito, esse digito vai ser armazenado em um objeto e quando ele começar a escrever o segundo número, o array será limpo e será colocado o sinal nele, e este será armazenado no objeto quando o sinal de igual OU outro sinal for pressionado, o último número também sera armazenado no objeto quando o sinal de igual for pressionado.
-let sign
-*/
