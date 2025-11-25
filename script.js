@@ -1,12 +1,22 @@
 let numbers = [];
-let timePassed;
+let time;
 
 let output = document.querySelector('#output');
-let point = document.querySelector('#point');
-let equal = document.querySelector('equal');
 let exclude = document.querySelector('#exclude');
 
+exclude.addEventListener('mousedown', () => {
+    time = Date.now();
 
+});
+
+exclude.addEventListener('mouseup', () => {
+    if(Date.now() - time >= 1500) {
+        output.innerText = '';
+    }
+    else {
+        output.innerText = output.textContent.slice(0, -1);
+    }
+})
 
 document.querySelector('#seven').addEventListener('click', () => { handleClick(7) });
 document.querySelector('#eight').addEventListener('click', () => { handleClick(8) });
@@ -23,6 +33,9 @@ document.querySelector('#mutiply').addEventListener('click', () => { handleClick
 document.querySelector('#zero').addEventListener('click', () => { handleClick(0) });
 document.querySelector('#divide').addEventListener('click', () => { handleClick('/') });
 
+document.querySelector('#point').addEventListener('click', () => { handleClick('.') });
+let equal = document.querySelector('equal');
+
 function handleClick(num) {
     if(typeof num === 'string') {
         if(typeof numbers[numbers.length - 1] === 'string') {
@@ -34,44 +47,9 @@ function handleClick(num) {
     output.innerText += num
 }
 
+
+
 /*
 criar um código em que o usuario digita o número e este é colocado em um array quando ele começar a escrever um novo dígito, esse digito vai ser armazenado em um objeto e quando ele começar a escrever o segundo número, o array será limpo e será colocado o sinal nele, e este será armazenado no objeto quando o sinal de igual OU outro sinal for pressionado, o último número também sera armazenado no objeto quando o sinal de igual for pressionado.
 let sign
 */
-
-function operate(num1, sign, num2) {
-    switch (sign) {
-        case "+":
-            add(num1, num2)
-            break;
-
-        case "-":
-            subtract(num1, num2)
-            break;
-
-        case "*":
-            mutiply(num1, num2)
-            break;
-
-        case "/":
-            divide(num1, num2)
-            break;
-
-        default:
-            alert("what the hell did you do??")
-            break;
-    }
-}
-
-function add(num1, num2) {
-    console.log(num1 + num2); 
-}
-function subtract(num1, num2) {
-    console.log(num1 - num2); 
-}
-function mutiply(num1, num2) {
-    console.log(num1 * num2); 
-}
-function divide(num1, num2) {
-    console.log(num1 / num2); 
-}
