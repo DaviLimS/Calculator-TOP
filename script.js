@@ -1,5 +1,6 @@
 let numbers = [];
 let time;
+var result;
 
 let output = document.querySelector('#output');
 let exclude = document.querySelector('#exclude');
@@ -10,7 +11,7 @@ exclude.addEventListener('mousedown', () => {
 });
 
 exclude.addEventListener('mouseup', () => {
-    if(Date.now() - time >= 1500) {
+    if(Date.now() - time >= 750) {
         numbers = []
         output.innerText = '';
     }
@@ -52,7 +53,6 @@ function handleClick(num) {
 }
 
 function evaluate(expression) {
-    var result;
     let script = document.createElement('script');
     script.type = 'text/javascript';
     script.text = 'result = ' + expression + ';';
