@@ -11,10 +11,12 @@ exclude.addEventListener('mousedown', () => {
 
 exclude.addEventListener('mouseup', () => {
     if(Date.now() - time >= 1500) {
+        numbers = []
         output.innerText = '';
     }
     else {
         output.innerText = output.textContent.slice(0, -1);
+        numbers.pop();
     }
 })
 
@@ -34,7 +36,9 @@ document.querySelector('#zero').addEventListener('click', () => { handleClick(0)
 document.querySelector('#divide').addEventListener('click', () => { handleClick('/') });
 
 document.querySelector('#point').addEventListener('click', () => { handleClick('.') });
-let equal = document.querySelector('equal');
+document.querySelector('#equal').addEventListener('click', () => {
+    evaluate(numbers.join(''));
+});
 
 function handleClick(num) {
     if(typeof num === 'string') {
@@ -45,6 +49,16 @@ function handleClick(num) {
     }
     numbers.push(num);
     output.innerText += num
+}
+
+function evaluate(expression) {
+    var result;
+    let script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.text = 'result = ' + expression + ';';
+    document.body.appendChild(script);
+    output.innerText = result;
+    document.body.removeChild(script);
 }
 
 
